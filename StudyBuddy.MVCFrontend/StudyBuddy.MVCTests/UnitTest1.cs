@@ -1,3 +1,4 @@
+using StudyBuddy.MVCFrontend.Controllers;
 using System;
 using Xunit;
 
@@ -8,7 +9,11 @@ namespace StudyBuddy.MVCTests
         [Fact]
         public void Test1()
         {
+            var controller = new HomeController();
 
+            var result = controller.Index();
+
+            Assert.NotNull(result);
         }
     }
 }
